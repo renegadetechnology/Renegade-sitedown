@@ -1,9 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hello, World!</title>
+  <title>Under Construction</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2; /* Light grey */
+    }
+
+    .container {
+      text-align: center;
+      color: white;
+    }
+
+    .animation {
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #333; /* Match text color below */
+    }
+
+    p {
+      font-size: 16px;
+      color: #888;
+    }
+
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 100px;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.10/lottie.min.js"></script>
 </head>
 <body>
-  <h1>Hello, World!</h1>
+  <img class="logo" src="https://raw.githubusercontent.com/renegadetechnology/Renegade-sitedown/7949ea32566981a555c9bf8b2ced0e4681e4fe5f/Renegade%20Logo%20Final.png" alt="Company Logo">
+  
+  <div class="container">
+    <div class="animation" id="lottieAnimation"></div>
+    <h1 style="color: #333;">Website Under Construction</h1>
+    <p>We are currently working on something awesome. Please check back later!</p>
+    <p>If you have any inquiries, please email us at <a href="mailto:solutions@renegadetechnology.com">solutions@renegadetechnology.com</a>.</p>
+  </div>
+
+  <script>
+    const animationContainer = document.getElementById('lottieAnimation');
+    const animationData = 'https://raw.githubusercontent.com/renegadetechnology/Renegade-sitedown/main/under_construction.json';
+
+    const animation = lottie.loadAnimation({
+      container: animationContainer,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: animationData
+    });
+  </script>
 </body>
 </html>
